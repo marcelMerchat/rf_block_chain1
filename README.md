@@ -1,0 +1,1 @@
+This repository contains a reproducible slide show that demonstrates how to the noise with radio circuit blocks.
