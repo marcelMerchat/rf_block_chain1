@@ -179,7 +179,7 @@ print(as.numeric(formatC(nf_56, format = &quot;f&quot;, digits = 3)))
 <pre><code>## [1] 31.623
 </code></pre>
 
-<h6>This is the noise figure expressed as a multiplier factor. This could be expressed alternatively in decibels as we do later at the final combination.</h6>
+<h5>This is the noise figure expressed as a multiplier factor. This could be expressed alternatively in decibels as we do later at the final combination.</h5>
 
   </article>
   <!-- Presenter Notes -->
@@ -255,7 +255,7 @@ print(as.numeric(formatC(nf23456_db, format = &quot;f&quot;, digits = 3)))
     <h3>Combine filter in Block-1 with the results for Blocks 5-6;  Port A to Port G</h3>
   </hgroup>
   <article data-timings="">
-    <h6>We repeat the procedure when we added the filter in Block-3 but the effect of the input filter is the same as just adding its loss in decibels to the Noise Figure. The combined result up to the analog-to-digital converter is:</h6>
+    <h5>We repeat the procedure when we added the filter in Block-3 but the effect of the input filter is the same as just adding its loss in decibels to the Noise Figure. The combined result up to the analog-to-digital converter is:</h5>
 
 <pre><code class="r">## Noise factor multiplier
 print(as.numeric(formatC(nf_123456, format = &quot;f&quot;, digits = 3)))
@@ -282,9 +282,9 @@ print(as.numeric(formatC(nf_db, format = &quot;f&quot;, digits = 3)))
     <h2>Analog-to-Digital Converter Block</h2>
   </hgroup>
   <article data-timings="">
-    <h4>The quantization process of assigning the available discrete levels to each sampled signal level adds noise to the signal for two reasons. The first reason is the distance between the analog signal level and the closest discrete level. The second reason corresponds to linearity errors which occur when sample measurements are not assigned to the closed discrete level. Most linearity errors are caused by voltage reference inaccuracy. For example, it the voltage reference had a tolerance of 1% and there were 256 discrete levels, the reference is clearly not accurate enough to reliably assign sample measurements to the closest level. The easiest way to calculate the noise factor of a converter block is if the manufacturer specifies the signal-to-noise ratio (SNR) at the converter output.</h4>
+    <h4>The quantization process of assigning available discrete levels to each signal sample adds noise for two reasons. The first is the distance between the analog signal level and the closest discrete level. The second reason corresponds to linearity errors which occur when measurements are not assigned to the closed level. Most linearity errors are caused by voltage reference inaccuracy. For example, if the voltage reference had a tolerance of 1% and there were 256 discrete levels, the reference is clearly not accurate enough to reliably assign to the closest level. The easiest way to calculate the noise factor of a converter block is if the manufacturer specifies the signal-to-noise ratio (SNR) at the converter output.</h4>
 
-<h3>\[NF (dB) = Power_{in} (dB) - SNR_{ADC} - Noise_{in} (dB)\]</h3>
+<h4>\[NF (dB) = Power_{in} (dB) - SNR_{ADC} - Noise_{in} (dB)\]</h4>
 
 <h4>Contributions to the overall noise figure decreases as the signal moves along the chain except for the digital-to-analog converter at the end.</h4>
 
@@ -304,20 +304,23 @@ print(as.numeric(formatC(nf_db, format = &quot;f&quot;, digits = 3)))
 
 <p><br></br></p>
 
-<p>July 18, 2017</p>
+<p>August 2, 2017</p>
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
+<style>
 
-<slide class="" id="custsty" style="background:;">
-  <article data-timings="">
-    <style>
 #custsty {
   /*background-image:url(C:/path/mypng.png);*/ 
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+}
+
+h4 {
+    LINE-HEIGHT:35px
+}
+
+h5 {
+    LINE-HEIGHT:32px
 }
 
 .boxText {
@@ -470,12 +473,6 @@ sub, sup {
       <a href="#" target="_self" rel='tooltip' 
         data-slide=12 title='NA'>
          12
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=13 title='NA'>
-         13
       </a>
     </li>
   </ul>

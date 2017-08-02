@@ -175,7 +175,7 @@ print(as.numeric(formatC(nf_56, format = "f", digits = 3)))
 
 ```
 
-###### This is the noise figure expressed as a multiplier factor. This could be expressed alternatively in decibels as we do later at the final combination.
+##### This is the noise figure expressed as a multiplier factor. This could be expressed alternatively in decibels as we do later at the final combination.
 
 
 ---
@@ -257,7 +257,7 @@ nf_db <- 10 * log10(nf_123456)
 
 ```
 
-###### We repeat the procedure when we added the filter in Block-3 but the effect of the input filter is the same as just adding its loss in decibels to the Noise Figure. The combined result up to the analog-to-digital converter is:  
+##### We repeat the procedure when we added the filter in Block-3 but the effect of the input filter is the same as just adding its loss in decibels to the Noise Figure. The combined result up to the analog-to-digital converter is:  
 
 ```{r stages1b, echo=TRUE}
 ## Noise factor multiplier
@@ -273,9 +273,9 @@ The effect of the RF filter in the first block in the chain degrades the noise f
 
 ## Analog-to-Digital Converter Block
 
-#### The quantization process of assigning the available discrete levels to each sampled signal level adds noise to the signal for two reasons. The first reason is the distance between the analog signal level and the closest discrete level. The second reason corresponds to linearity errors which occur when sample measurements are not assigned to the closed discrete level. Most linearity errors are caused by voltage reference inaccuracy. For example, it the voltage reference had a tolerance of 1% and there were 256 discrete levels, the reference is clearly not accurate enough to reliably assign sample measurements to the closest level. The easiest way to calculate the noise factor of a converter block is if the manufacturer specifies the signal-to-noise ratio (SNR) at the converter output.
+#### The quantization process of assigning available discrete levels to each signal sample adds noise for two reasons. The first is the distance between the analog signal level and the closest discrete level. The second reason corresponds to linearity errors which occur when measurements are not assigned to the closed level. Most linearity errors are caused by voltage reference inaccuracy. For example, if the voltage reference had a tolerance of 1% and there were 256 discrete levels, the reference is clearly not accurate enough to reliably assign to the closest level. The easiest way to calculate the noise factor of a converter block is if the manufacturer specifies the signal-to-noise ratio (SNR) at the converter output.
 
-### $$NF (dB) = Power_{in} (dB) - SNR_{ADC} - Noise_{in} (dB)$$
+#### $$NF (dB) = Power_{in} (dB) - SNR_{ADC} - Noise_{in} (dB)$$
 
 #### Contributions to the overall noise figure decreases as the signal moves along the chain except for the digital-to-analog converter at the end.
 
@@ -291,16 +291,23 @@ The effect of the RF filter in the first block in the chain degrades the noise f
 
 <br></br>
 
-July 18, 2017
-
---- #custsty
+August 2, 2017
 
 <style>
+
 #custsty {
   /*background-image:url(C:/path/mypng.png);*/ 
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+}
+
+h4 {
+    LINE-HEIGHT:35px
+}
+
+h5 {
+    LINE-HEIGHT:32px
 }
 
 .boxText {
