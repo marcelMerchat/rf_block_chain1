@@ -44,7 +44,7 @@ knit        : slidify::knit2slides
 <body>
     <table width="900px">
         <tr>
-            <td><img src="cascaded.png" width="500" height="360" style="display: block" /img></td>
+            <td><img src="cascaded1.png" width="500" height="360" style="display: block" /img></td>
             <td>
                 <p class="boxText">V<sub>s</sub>:   input signal voltage</p>
                 <p class="boxText">R<sub>s</sub>:   output impedance of signal source</p>
